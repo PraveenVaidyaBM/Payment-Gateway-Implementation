@@ -1,0 +1,26 @@
+<section class="py-2">
+    <div class="row">
+        <div class="col-md6 text-center">
+            <h1 class="display-3 mt-3 pt-5">
+                 E Book 
+            </h1><p class="lead">Read books online</p>
+            <form action="/charge" method="post">
+            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="{{stripePublishableKey}}"
+            data-amount="2500"
+            data-name="E-Book"
+            data-description="Ebook Written By Praveen"
+            data-image="/img/marketplace.png"
+            data-locale="auto">
+            </script>
+            <script>
+                document.getElementsByClassName('stripe-button-el')[0].style.display = 'none'
+            </script>
+            <button type="submit" class="btn btn-outline-dark text-white btn-lg">Purchase</button>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <img src="/img/book.PNG" alt="" class="img-fluid">
+        </div>
+    </div>
+</section>
